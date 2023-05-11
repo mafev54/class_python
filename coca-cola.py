@@ -1,5 +1,4 @@
 class Coca_cola:
-
     def __init__(self, quantity, sugar, coloring, flavorings, acidifier, caffeine):
         self.__quantity = quantity
         self.__sugar = sugar
@@ -44,12 +43,12 @@ class Coca_cola:
         return self.__caffeine
 
     def to_open(self):
-        self.to_open = True
-        print("you opened it")
+        self.__to_open = True
+        print("You opened it.")
 
     def to_drink(self):
-        self.to_drink = True
-        print("drink it")
+        self.__to_drink = True
+        print("Drink it.")
 
 
 class Monster(Coca_cola):
@@ -65,9 +64,18 @@ class Monster(Coca_cola):
         return self.__vitamin
 
 
+coca = Coca_cola("coke", "sugar", "caramel", "lime, lemon, orange, neroli, cinnamon, nutmeg and vanilla.",
+                 "Phosphoric acid", "caffeine")
+
+print(f"{coca.get_quantity1()} is a product that has {coca.get_sugar1()}, {coca.get_coloring1()} {coca.get_flavorings1()} as a colorant and flavoring,\n "
+      f"{coca.get_acidifier1()} and has {coca.get_caffeine1()}.")
+
 drink = Monster("monster", "sugar", "caramel", "lime, lemon, orange, neroli, cinnamon, nutmeg and vanilla.",
                 "Phosphoric acid", "caffeine", "taurine", "vitamin")
-print(f"{drink.get_quantity1()} is a product that has {drink.get_sugar1()}, {drink.get_coloring1()} {drink.get_flavorings1()} as a colorant, and flavoring, "
+
+print("Monster")
+
+print(f"{drink.get_quantity1()} is a product that has {drink.get_sugar1()}, {drink.get_coloring1()} {drink.get_flavorings1()} as a colorant, and flavoring,\n "
       f"{drink.get_acidifier1()}, has {drink.get_caffeine1()}, has {drink.get_taurine1()},and has {drink.get_vitamin1()}")
 
 drink.to_open()
